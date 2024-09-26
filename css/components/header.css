@@ -1,0 +1,42 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.25rem;
+    padding-block: 1.25rem;
+}
+
+.headerLogo{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navUl{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navA{
+    color: inherit;
+    text-decoration: none;
+}
+
+.headerIconButton{
+    display: none;
+}
+
+.headerIcon{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+@media (width < 768px){
+    .headerNav{
+        display: none;
+    }
+
+    .headerIconButton{
+        display: block;
+    }
+}
