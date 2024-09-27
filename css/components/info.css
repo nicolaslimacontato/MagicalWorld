@@ -1,31 +1,116 @@
-.info{
-    padding-top: 2rem;
+.infobg{
+    width: 100%;
+    background-image: url('/img/bg2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 4rem;
+    height: max-content;
 }
 
-.line{
+.info {
+    padding-top: 2rem;
+    max-width: 1280px;
+    margin-inline: auto;
+    margin-block: 7rem;
+}
+
+.line {
     width: 100%;
     height: 2px;
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.itemWrapper{
+.itemWrapper {
     display: flex;
-    margin-block: 3rem;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    gap: 1.5rem;
+    padding-inline: 1.25rem;
 }
 
-.item{
+.item {
     flex: 1;
+    min-width: 150px;
 }
 
-.itemTitle{
+.itemTitle {
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 1;
     text-align: center;
 }
 
-.itemDescription{
+.itemDescription {
     color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
     text-align: center;
+}
+
+.infoWrapper {
+    display: flex;
+    padding-inline: 1.25rem;
+    gap: 1.25rem;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+
+.infoLeft,
+.infoRight {
+    flex: 1;
+}
+
+.infoRight {
+    align-self: center;
+}
+
+.sectionUpText {
+    color: #2eb1a3;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.sectionDescription {
+    color: rgba(255, 255, 255, 0.5);
+    line-height: calc(1em + 0.7rem);
+    margin-block: 1rem;
+}
+
+.sectionButton {
+    font-size: 1rem;
+    background: linear-gradient(to right, #e8546b, #ac3cf6);
+    padding: 0.5em 2em;
+    border-radius: 6px;
+    transition: all 0.3s ease; /* Suavizando transições */
+}
+
+.sectionButton:hover {
+    transform: translateY(-2px);
+    /* Efeito sutil de elevação no hover */
+    transition: all 0.3s ease;
+    /* Suavizando transições */
+    box-shadow: 0 4px 8px rgba(172, 60, 246, 0.3);
+    /* Sombra suave no hover */
+}
+
+@media (width < 1024px) {
+    .infoWrapper {
+        flex-direction: column;
+    }
+
+    .sectionDescription {
+        max-width: 60ch;
+    }
+}
+
+@media (width < 475px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
 }
